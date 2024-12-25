@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merry Christmas</title>
+</head>
+<style>
+  .marry {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cover-gift {
+    width: 200px;
+    height: 5vh;
+    background-color: red;
+    transition: transform 0.5s ease;  /* Smooth rotation */
+  }
+  .body-gift {
+    width: 180px;
+    height: 10vh;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .marry>img{
+    width: 100px;
+    position: absolute;
+    z-index: 0;
+  }
+  .cable {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(248, 41, 41);
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(17, 196, 17);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: rgb(10, 160, 10);
+  }
+</style>
+<body>
+  <div class="marry">
+    <div id="cover" class="cover-gift"></div> <!-- Fixed ID -->
+    <img id="img" src="fucku-removebg-preview.png" alt="">
+    <div id="body" class="body-gift">
+      <div class="cable"></div>
+    </div>
+    <button onclick="clickbtn()">Open Gift</button>
+  </div>
+</body>
+<script>
+  function clickbtn() {
+    let cover = document.getElementById("cover");
+    let gift = document.getElementById("img");
+    document.getElementById("cover").style.marginLeft = "250px";  
+    document.getElementById("img").style.opacity = "1";
+    document.getElementById("img").style.transform = "translateY(-140px)";  
+    document.getElementById("cover").style.transition = "margin-left 0.8s ease";
+    document.getElementById("img").style.transition = "transform 1s ease, opacity 1s ease";
+  }
+</script>
+</html>
