@@ -30,7 +30,7 @@
     z-index: 1;
   }
   .marry>img{
-    width: 100px;
+    width: 50px;
     position: absolute;
     z-index: 0;
   }
@@ -56,7 +56,7 @@
 <body>
   <div class="marry">
     <div id="cover" class="cover-gift"></div> <!-- Fixed ID -->
-    <img id="img" src="qraba.png" alt="">
+    <img id="img" src="abaqr.jpg" alt="">
     <div id="body" class="body-gift">
       <div class="cable"></div>
     </div>
@@ -67,11 +67,11 @@
   function clickbtn() {
     let cover = document.getElementById("cover");
     let gift = document.getElementById("img");
-    document.getElementById("cover").style.marginLeft = "250px";  
-    document.getElementById("img").style.opacity = "1";
-    document.getElementById("img").style.transform = "translateY(-140px)";  
-    document.getElementById("cover").style.transition = "margin-left 0.8s ease";
-    document.getElementById("img").style.transition = "transform 1s ease, opacity 1s ease";
+    cover.style.marginLeft = "350px";  
+    gift.style.transform = "translateY(-140px)";
+    gift.style.width = "150px";    
+    cover.style.transition = "margin-left 0.8s ease";
+    gift.style.transition = "transform 1s ease, opacity 1s ease,width 1s ";
   }
 </script>
 </html>
